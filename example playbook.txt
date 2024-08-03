@@ -1,0 +1,38 @@
+- name: Deploy Docker container from Ansible and Jenkins Pipeline
+  hosts: <host name>
+  remote_user: root
+  tasks:
+
+    - name: Build Docker Image
+      docker_image:
+        name: <image name>
+        source: build
+        build:
+          path: <absolute path of build files location>
+        state: present
+
+    - name: Create Docker Container
+      docker_container:
+        name: <container name>
+        image: <image url>
+        ports: 
+          - "5000:5000"
+        recreate: yes
+        restart_policy: always
+        state: started
+
+    - name: Stop and Remove Docker Container
+      docker_container:
+        name: <container name>
+        image: <image name>
+        state: absent
+
+    - name: Create Docker Container
+      docker_container:
+        name: <container name>
+        image: <image name>
+        ports: 
+          - "<port number>"
+        recreate: yes
+        restart_policy: always
+        state: started
