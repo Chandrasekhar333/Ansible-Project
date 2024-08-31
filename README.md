@@ -1,7 +1,7 @@
 <h1 align="center">Jenkins CI/CD Pipeline with Ansible, Docker</h1>                                          
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2f339f04-1546-416d-99ba-39341decdc4d" alt="Image" width="400" height="250">
+  <img src="https://github.com/user-attachments/assets/d1e0e08c-ded5-4898-8935-8cbe13983e1f" alt="Image" width="400" height="250">
 </p>
 
 # What is each tool?
